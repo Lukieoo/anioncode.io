@@ -91,8 +91,8 @@ class LargeChild extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 12.0, top: 20),
-                    child: RichText(
-                      text: TextSpan(
+                    child: SelectableText.rich(
+                       TextSpan(
                        text:"I am Android Developer / Flutter Developer who create beautiful apps for your IOS/Android device.",
                         style: TextStyle(
                           color: Colors.black87,
@@ -230,8 +230,8 @@ class SmallChild extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 12.0, top: 20),
-              child: RichText(
-                text: TextSpan(
+              child: SelectableText.rich(
+               TextSpan(
                     text:"I am Android Developer / Flutter Developer who create beautiful apps for your IOS/Android device.",
                     style: TextStyle(
                       color: Colors.black87,
@@ -264,8 +264,6 @@ class SmallChild extends StatelessWidget {
             //   Search(),
             Wrap(
               children: [
-                Row(
-                  children: [
 
                     SizedBox(width: 20,),
                     SizedBox(
@@ -327,8 +325,7 @@ class SmallChild extends StatelessWidget {
                     ,
                     SizedBox(width: 20,),
 
-                  ],
-                )
+
               ],
             ),
             SizedBox(
