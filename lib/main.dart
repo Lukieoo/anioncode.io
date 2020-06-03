@@ -6,7 +6,7 @@ import 'widgets/search.dart';
 import 'dart:js' as js;
 
 void main() => runApp(MaterialApp(
-      title: 'Flutter Landing Page',
+      title: 'Anioncode by Lukieoo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
