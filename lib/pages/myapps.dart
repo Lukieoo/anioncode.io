@@ -1,23 +1,65 @@
+import 'dart:html';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'dart:js' as js;
+class LargeApps extends StatefulWidget {
 
-class LargeApps extends StatelessWidget {
+
+  @override
+  _LargeAppsState createState() => _LargeAppsState();
+}
+
+class _LargeAppsState extends State<LargeApps> {
   @override
   Widget build(BuildContext context) {
+
+    initState(){
+      super.initState();
+
+    }
+
+
     return SizedBox(
       height: 600,
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
           FractionallySizedBox(
-            alignment: Alignment.centerRight,
-            widthFactor: .6,
-            child: Image.network("assets/mobile-cont.png", ),
-          ),
+              alignment: Alignment.centerRight,
+              widthFactor: .55,
+              child:
+//              Padding(
+//padding: EdgeInsets.all(100),
+//                child: CarouselSlider(
+//                  options: CarouselOptions(
+//                    height: 400.0,
+//                    autoPlay: true,
+//                    enlargeCenterPage: true,
+//                  ),
+//                  items: [1, 2, 3, 4].map((i) {
+//                    return Builder(
+//                      builder: (BuildContext context) {
+//                        return Card(
+//                          child:  Container(
+//                            //child: _iframeWidget,
+//                          ),
+//                        );
+//                      },
+//                    );
+//                  }).toList(),
+////                  ),
+//
+//                  //Search()
+//                ),
+//              )
+            Image.network(
+              "assets/mobile-cont.png",
+            ),
+              ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
-            widthFactor: .6,
+            widthFactor: .45,
             child: Container(
                 padding: EdgeInsets.only(left: 48),
                 child: Column(
@@ -68,44 +110,6 @@ class LargeApps extends StatelessWidget {
                           ),
 
                           //  Image.network("assets/myapp/unnamed.webp"),
-//                  CarouselSlider(
-//                    options: CarouselOptions(height: 400.0, autoPlay: true,
-//
-//                      enlargeCenterPage: true,),
-//                    items: [1, 2, 3, 4].map((i) {
-//                      return Builder(
-//                        builder: (BuildContext context) {
-//                          return Card(
-//
-//                            child: Column(
-//                              crossAxisAlignment: CrossAxisAlignment.start,
-//                                mainAxisSize: MainAxisSize.min,
-//                                children: <Widget>[
-//                                  Image.network("assets/myapp/myapp$i.png" ,height: 300,),
-//                                  ButtonBar(
-//                                    children: <Widget>[
-//                                      FlatButton(
-//                                        child: const Text('BUY TICKETS'),
-//                                        onPressed: () {
-//                                          /* ... */
-//                                        },
-//                                      ),
-//                                      FlatButton(
-//                                        child: const Text('LISTEN'),
-//                                        onPressed: () {
-//                                          /* ... */
-//                                        },
-//                                      ),
-//                                    ],
-//                                  ),
-//                                ]),
-//                          );
-//                        },
-//                      );
-//                    }).toList(),
-//                  ),
-
-                          //Search()
                         ],
                       ),
                       SizedBox(
@@ -149,7 +153,6 @@ class LargeApps extends StatelessWidget {
                           SizedBox(
                             width: 20,
                           ),
-
                         ],
                       ),
                     ])),
@@ -178,7 +181,6 @@ class SmallApps extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-
                     Text("My apps",
                         style: TextStyle(
                             fontSize: 35,
@@ -279,18 +281,15 @@ class SmallApps extends StatelessWidget {
                       height: 30,
                     ),
                     Wrap(
-
                       runSpacing: 10,
                       alignment: WrapAlignment.spaceBetween,
                       spacing: 10,
                       crossAxisAlignment: WrapCrossAlignment.start,
                       children: [
-
-                         MenuCard(
-                            title: "viewConnect 2",
-                            html: "assets/myapp/comer3.webp",
-                          ),
-
+                        MenuCard(
+                          title: "viewConnect 2",
+                          html: "assets/myapp/comer3.webp",
+                        ),
                         SizedBox(
                           width: 20,
                         ),
@@ -315,7 +314,6 @@ class SmallApps extends StatelessWidget {
                         SizedBox(
                           width: 20,
                         ),
-
                       ],
                     ),
 //                    CarouselSlider(
@@ -395,7 +393,10 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: (MediaQuery.of(context).size.width > 1140||MediaQuery.of(context).size.width < 760) ? 110 : 80,
+      width: (MediaQuery.of(context).size.width > 1510 ||
+              MediaQuery.of(context).size.width < 760)
+          ? 110
+          : 80,
       padding: EdgeInsets.all(5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
@@ -415,18 +416,21 @@ class MenuCard extends StatelessWidget {
             html,
             height: 80,
           ),
-          (MediaQuery.of(context).size.width > 1140||MediaQuery.of(context).size.width < 760)?Container(
-            height: 80,
-            alignment: Alignment.center,
-            child: Text(
-              title,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Montserrat-Regular",
-                  color: Colors.black87),
-            ),
-          ):Container(),
+          (MediaQuery.of(context).size.width > 1510 ||
+                  MediaQuery.of(context).size.width < 760)
+              ? Container(
+                  height: 80,
+                  alignment: Alignment.center,
+                  child: Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Montserrat-Regular",
+                        color: Colors.black87),
+                  ),
+                )
+              : Container(),
         ],
       ),
     );
