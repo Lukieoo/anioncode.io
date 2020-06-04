@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/pages/home.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutterapp/pages/myapps.dart';
 import 'widgets/navbar.dart';
 import 'utils/responsiveLayout.dart';
 import 'widgets/search.dart';
@@ -70,8 +70,8 @@ class Body extends StatelessWidget {
         );
       case 1:
         return ResponsiveLayout(
-          largeScreen: Container(),
-          smallScreen: Container(),
+          largeScreen: LargeApps(),
+          smallScreen: SmallApps(),
         );
 
     }

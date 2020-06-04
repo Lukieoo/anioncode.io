@@ -141,7 +141,21 @@ class LargeChild extends StatelessWidget {
                               ))
                           ,
                           SizedBox(width: 20,),
+                          SizedBox(
+                              child: FloatingActionButton(
+                                backgroundColor: Colors.white10,
 
+                                child: Center(child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image.network("assets/linkedin.png"),
+                                )),
+                                onPressed: () {
+                                  js.context.callMethod("open", ["https://www.linkedin.com/in/pawe%C5%82-krzy%C5%9Bciak-2691a8186/"]);
+
+                                },
+                              ))
+                          ,
+                          SizedBox(width: 20,),
                         ],
                       )
                     ],
@@ -296,7 +310,21 @@ class SmallChild extends StatelessWidget {
                     ))
                 ,
                 SizedBox(width: 20,),
+                SizedBox(
+                    child: FloatingActionButton(
+                      backgroundColor: Colors.white10,
 
+                      child: Center(child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.network("assets/linkedin.png"),
+                      )),
+                      onPressed: () {
+                        js.context.callMethod("open", ["https://www.linkedin.com/in/pawe%C5%82-krzy%C5%9Bciak-2691a8186/"]);
+
+                      },
+                    ))
+                ,
+                SizedBox(width: 20,),
 
               ],
             ),
