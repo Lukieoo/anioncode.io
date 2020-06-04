@@ -13,62 +13,61 @@ class LargeApps extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .6,
-            child: Image.network("assets/myapps.png", scale: .65),
+            child: Image.network("assets/mobile-cont.png", ),
           ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
-            widthFactor: .65,
+            widthFactor: .6,
             child: Container(
-              padding: EdgeInsets.only(left: 48),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("My apps",
-                      style: TextStyle(
-                          fontSize: 35,
-                          fontWeight: FontWeight.normal,
-
-                          color: Colors.black87)),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Wrap(
+                padding: EdgeInsets.only(left: 48),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      MenuCard(
-                        title: "Drzewostan",
-                        html: "assets/myapp/unnamed.webp",
-                      ),
+                      Text("My apps",
+                          style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black87)),
                       SizedBox(
-                        width: 20,
+                        height: 30,
                       ),
-                      MenuCard(
-                        title: "Spojrzyj -Soczewki kontaktowe",
-                        html: "assets/myapp/unnamed1.webp",
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      MenuCard(
-                        title: "Smoguś",
-                        html: "assets/myapp/unnamed2.webp",
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      MenuCard(
-                        title: "Witcher \"Toss a coin to your Witcher \"",
-                        html: "assets/myapp/unnamed3.webp",
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      MenuCard(
-                        title: "Zaznacz to",
-                        html: "assets/myapp/unnamed4.webp",
-                      ),
+                      Wrap(
+                        children: [
+                          MenuCard(
+                            title: "Drzewostan",
+                            html: "assets/myapp/unnamed.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "Spojrzyj -Soczewki kontaktowe",
+                            html: "assets/myapp/unnamed1.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "Smoguś",
+                            html: "assets/myapp/unnamed2.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "Witcher \"Toss a coin to your Witcher \"",
+                            html: "assets/myapp/unnamed3.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "Zaznacz to",
+                            html: "assets/myapp/unnamed4.webp",
+                          ),
 
-                      //  Image.network("assets/myapp/unnamed.webp"),
+                          //  Image.network("assets/myapp/unnamed.webp"),
 //                  CarouselSlider(
 //                    options: CarouselOptions(height: 400.0, autoPlay: true,
 //
@@ -106,58 +105,54 @@ class LargeApps extends StatelessWidget {
 //                    }).toList(),
 //                  ),
 
-                      //Search()
-                    ],
-                  ),
-              SizedBox(
-                height: 30,
-              ),
-              Text("Commercial apps",
-                  style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.normal,
+                          //Search()
+                        ],
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text("Commercial apps",
+                          style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black87)),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Wrap(
+                        children: [
+                          MenuCard(
+                            title: "viewConnect 2",
+                            html: "assets/myapp/comer3.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "viewAnalytics",
+                            html: "assets/myapp/comer2.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "Rachunek Sumienia",
+                            html: "assets/myapp/comer1.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          MenuCard(
+                            title: "Alleluja",
+                            html: "assets/myapp/comer4.webp",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
 
-                      color: Colors.black87)),
-              SizedBox(
-                height: 30,
-              ),
-              Wrap(
-                children: [
-                  MenuCard(
-                    title: "Drzewostan",
-                    html: "assets/myapp/unnamed.webp",
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  MenuCard(
-                    title: "Spojrzyj -Soczewki kontaktowe",
-                    html: "assets/myapp/unnamed1.webp",
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  MenuCard(
-                    title: "Smoguś",
-                    html: "assets/myapp/unnamed2.webp",
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  MenuCard(
-                    title: "Witcher \"Toss a coin to your Witcher \"",
-                    html: "assets/myapp/unnamed3.webp",
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  MenuCard(
-                    title: "Zaznacz to",
-                    html: "assets/myapp/unnamed4.webp",
-                  ),
-                ],
-              ),
-            ),
+                        ],
+                      ),
+                    ])),
           )
         ],
       ),
@@ -172,7 +167,7 @@ class SmallApps extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(40),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             FractionallySizedBox(
               alignment: Alignment.center,
@@ -180,53 +175,194 @@ class SmallApps extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(left: 48),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    CarouselSlider(
-                      options: CarouselOptions(
-                        height: 400.0,
-                        autoPlay: true,
-                        enlargeCenterPage: true,
-                      ),
-                      items: [1, 2, 3, 4, 5].map((i) {
-                        return Builder(
-                          builder: (BuildContext context) {
-                            return Card(
-                              child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    const ListTile(
-                                      leading: Icon(Icons.album),
-                                      title: Text('The Enchanted Nightingale'),
-                                      subtitle: Text(
-                                          'Music by Julie Gable. Lyrics by Sidney Stein.'),
-                                    ),
-                                    ButtonBar(
-                                      children: <Widget>[
-                                        FlatButton(
-                                          child: const Text('BUY TICKETS'),
-                                          onPressed: () {
-                                            /* ... */
-                                          },
-                                        ),
-                                        FlatButton(
-                                          child: const Text('LISTEN'),
-                                          onPressed: () {
-                                            /* ... */
-                                          },
-                                        ),
-                                      ],
-                                    ),
-                                  ]),
-                            );
-                          },
-                        );
-                      }).toList(),
+
+                    Text("My apps",
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black87)),
+                    SizedBox(
+                      height: 30,
                     ),
+                    Wrap(
+                      runSpacing: 15,
+                      alignment: WrapAlignment.center,
+                      spacing: 10,
+                      crossAxisAlignment: WrapCrossAlignment.start,
+                      children: [
+                        MenuCard(
+                          title: "Drzewostan",
+                          html: "assets/myapp/unnamed.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "Spojrzyj -Soczewki kontaktowe",
+                          html: "assets/myapp/unnamed1.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "Smoguś",
+                          html: "assets/myapp/unnamed2.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "Witcher \"Toss a coin to your Witcher \"",
+                          html: "assets/myapp/unnamed3.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "Zaznacz to",
+                          html: "assets/myapp/unnamed4.webp",
+                        ),
+
+                        //  Image.network("assets/myapp/unnamed.webp"),
+//                  CarouselSlider(
+//                    options: CarouselOptions(height: 400.0, autoPlay: true,
+//
+//                      enlargeCenterPage: true,),
+//                    items: [1, 2, 3, 4].map((i) {
+//                      return Builder(
+//                        builder: (BuildContext context) {
+//                          return Card(
+//
+//                            child: Column(
+//                              crossAxisAlignment: CrossAxisAlignment.start,
+//                                mainAxisSize: MainAxisSize.min,
+//                                children: <Widget>[
+//                                  Image.network("assets/myapp/myapp$i.png" ,height: 300,),
+//                                  ButtonBar(
+//                                    children: <Widget>[
+//                                      FlatButton(
+//                                        child: const Text('BUY TICKETS'),
+//                                        onPressed: () {
+//                                          /* ... */
+//                                        },
+//                                      ),
+//                                      FlatButton(
+//                                        child: const Text('LISTEN'),
+//                                        onPressed: () {
+//                                          /* ... */
+//                                        },
+//                                      ),
+//                                    ],
+//                                  ),
+//                                ]),
+//                          );
+//                        },
+//                      );
+//                    }).toList(),
+//                  ),
+
+                        //Search()
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text("Commercial apps",
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black87)),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Wrap(
+
+                      runSpacing: 10,
+                      alignment: WrapAlignment.spaceBetween,
+                      spacing: 10,
+                      crossAxisAlignment: WrapCrossAlignment.start,
+                      children: [
+
+                         MenuCard(
+                            title: "viewConnect 2",
+                            html: "assets/myapp/comer3.webp",
+                          ),
+
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "viewAnalytics",
+                          html: "assets/myapp/comer2.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "Rachunek Sumienia",
+                          html: "assets/myapp/comer1.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        MenuCard(
+                          title: "Alleluja",
+                          html: "assets/myapp/comer4.webp",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+
+                      ],
+                    ),
+//                    CarouselSlider(
+//                      options: CarouselOptions(
+//                        height: 400.0,
+//                        autoPlay: true,
+//                        enlargeCenterPage: true,
+//                      ),
+//                      items: [1, 2, 3, 4, 5].map((i) {
+//                        return Builder(
+//                          builder: (BuildContext context) {
+//                            return Card(
+//                              child: Column(
+//                                  mainAxisSize: MainAxisSize.min,
+//                                  children: <Widget>[
+//                                    const ListTile(
+//                                      leading: Icon(Icons.album),
+//                                      title: Text('The Enchanted Nightingale'),
+//                                      subtitle: Text(
+//                                          'Music by Julie Gable. Lyrics by Sidney Stein.'),
+//                                    ),
+//                                    ButtonBar(
+//                                      children: <Widget>[
+//                                        FlatButton(
+//                                          child: const Text('BUY TICKETS'),
+//                                          onPressed: () {
+//                                            /* ... */
+//                                          },
+//                                        ),
+//                                        FlatButton(
+//                                          child: const Text('LISTEN'),
+//                                          onPressed: () {
+//                                            /* ... */
+//                                          },
+//                                        ),
+//                                      ],
+//                                    ),
+//                                  ]),
+//                            );
+//                          },
+//                        );
+//                      }).toList(),
+//                    ),
                     SizedBox(
                       height: 40,
                     ),
+                    Image.network("assets/mobile-cont.png", scale: .65),
                     //Search()
                   ],
                 ),
@@ -259,7 +395,7 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: (MediaQuery.of(context).size.width > 760) ? 110 : 80,
+      width: (MediaQuery.of(context).size.width > 1140||MediaQuery.of(context).size.width < 760) ? 110 : 80,
       padding: EdgeInsets.all(5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
@@ -279,7 +415,7 @@ class MenuCard extends StatelessWidget {
             html,
             height: 80,
           ),
-          Container(
+          (MediaQuery.of(context).size.width > 1140||MediaQuery.of(context).size.width < 760)?Container(
             height: 80,
             alignment: Alignment.center,
             child: Text(
@@ -290,7 +426,7 @@ class MenuCard extends StatelessWidget {
                   fontFamily: "Montserrat-Regular",
                   color: Colors.black87),
             ),
-          ),
+          ):Container(),
         ],
       ),
     );
