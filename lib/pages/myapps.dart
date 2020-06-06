@@ -3,9 +3,10 @@ import 'dart:html';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'dart:js' as js;
+
+import 'package:flutter/rendering.dart';
+
 class LargeApps extends StatefulWidget {
-
-
   @override
   _LargeAppsState createState() => _LargeAppsState();
 }
@@ -13,49 +14,56 @@ class LargeApps extends StatefulWidget {
 class _LargeAppsState extends State<LargeApps> {
   @override
   Widget build(BuildContext context) {
-
-    initState(){
+    initState() {
       super.initState();
-
     }
-
 
     return SizedBox(
       height: 600,
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
+//          Positioned(
+//            right: MediaQuery.of(context).size.width/2,
+//            bottom: -100,
+//            child: Image.network(
+//              "assets/mobile-cont.png",
+//            ),
+//          ),
           FractionallySizedBox(
               alignment: Alignment.centerRight,
               widthFactor: .55,
-              child:
-//              Padding(
-//padding: EdgeInsets.all(100),
-//                child: CarouselSlider(
-//                  options: CarouselOptions(
-//                    height: 400.0,
-//                    autoPlay: true,
-//                    enlargeCenterPage: true,
+              child: Padding(
+                padding: EdgeInsets.all(100),
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    height: 400.0,
+                    autoPlay: true,
+                    enlargeCenterPage: true,
+                  ),
+                  items: [1, 2, 3, 4].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Card(
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              Image.network("https://lh3.googleusercontent.com/XTn8szgzKy-ndAp4IqycotR9VLvjkmqrHFtP446Y7Lty-Tus29sM-QWH_NH8c04BvLY=w2560-h1292-rw",height: 300,),
+
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
 //                  ),
-//                  items: [1, 2, 3, 4].map((i) {
-//                    return Builder(
-//                      builder: (BuildContext context) {
-//                        return Card(
-//                          child:  Container(
-//                            //child: _iframeWidget,
-//                          ),
-//                        );
-//                      },
-//                    );
-//                  }).toList(),
-////                  ),
-//
-//                  //Search()
-//                ),
-//              )
-            Image.network(
-              "assets/mobile-cont.png",
-            ),
+
+                  //Search()
+                ),
+              )
+//            Image.network(
+//              "assets/mobile-cont.png",
+//            ),
               ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
@@ -425,6 +433,7 @@ class MenuCard extends StatelessWidget {
                     title,
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                         fontFamily: "Montserrat-Regular",
                         color: Colors.black87),
