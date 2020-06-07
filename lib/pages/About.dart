@@ -310,7 +310,7 @@ class MenuCard extends StatelessWidget {
         child: Column(
           children: <Widget>[
             // Image.asset(image, height: 40),
-            Image.network(
+            Image.asset(
               html,
               height: 140,
             ),
@@ -370,7 +370,7 @@ class MenuCard extends StatelessWidget {
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/github.png"),
+                        child: Image.asset("assets/github.png"),
                       )),
                       onPressed: () {
                         js.context
@@ -387,7 +387,7 @@ class MenuCard extends StatelessWidget {
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/youtube.png"),
+                        child: Image.asset("assets/youtube.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", [
@@ -404,7 +404,7 @@ class MenuCard extends StatelessWidget {
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/fb.png"),
+                        child: Image.asset("assets/fb.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", [
@@ -421,7 +421,7 @@ class MenuCard extends StatelessWidget {
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/google.png"),
+                        child: Image.asset("assets/google.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", [
@@ -438,7 +438,7 @@ class MenuCard extends StatelessWidget {
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/linkedin.png"),
+                        child: Image.asset("assets/linkedin.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", [

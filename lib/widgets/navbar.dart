@@ -44,7 +44,7 @@ class _NavBarState extends State<NavBar> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Image.network(
+                  Image.asset(
                     "assets/AnionCode.png",
                     height: 60,
                   )
@@ -96,7 +96,7 @@ class _NavBarState extends State<NavBar> {
                           })
                         },
                     child:
-                        Image.network("assets/menu.png", width: 26, height: 26))
+                    Image.asset("assets/menu.png", width: 26, height: 26))
             ],
           ),
           (pressMenu) ? Padding(

@@ -79,7 +79,7 @@ class _LargeAppsState extends State<LargeApps> {
                               children: [
                                 (MediaQuery.of(context).size.width > 1510 ||
                                         MediaQuery.of(context).size.width < 760)
-                                    ? Image.network(
+                                    ? Image.asset(
                                         "assets/myapp/rect$i.png",
                                         height: 350,
                                       )
@@ -96,8 +96,8 @@ class _LargeAppsState extends State<LargeApps> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Image.network(
-                                          "assets/myapp/unnamed${i - 1}.webp",
+                                        Image.asset(
+                                          "assets/myapp/unnamed${i - 1}.png",
                                           height: 80,
                                         ),
                                         SizedBox(
@@ -176,7 +176,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Drzewostan",
-                              html: "assets/myapp/unnamed0.webp",
+                              html: "assets/myapp/unnamed0.png",
                             ),
                           ),
                           SizedBox(
@@ -190,7 +190,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Spojrzyj -Soczewki kontaktowe",
-                              html: "assets/myapp/unnamed1.webp",
+                              html: "assets/myapp/unnamed1.png",
                             ),
                           ),
                           SizedBox(
@@ -204,7 +204,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Smoguś",
-                              html: "assets/myapp/unnamed2.webp",
+                              html: "assets/myapp/unnamed2.png",
                             ),
                           ),
                           SizedBox(
@@ -218,7 +218,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Witcher \"Toss a coin to your Witcher \"",
-                              html: "assets/myapp/unnamed3.webp",
+                              html: "assets/myapp/unnamed3.png",
                             ),
                           ),
                           SizedBox(
@@ -232,11 +232,11 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Zaznacz to",
-                              html: "assets/myapp/unnamed4.webp",
+                              html: "assets/myapp/unnamed4.png",
                             ),
                           ),
 
-                          //  Image.network("assets/myapp/unnamed.webp"),
+                          //  Image.network("assets/myapp/unnamed.png"),
                         ],
                       ),
                       SizedBox(
@@ -260,7 +260,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "viewConnect 2",
-                              html: "assets/myapp/comer3.webp",
+                              html: "assets/myapp/comer3.png",
                             ),
                           ),
                           SizedBox(
@@ -274,7 +274,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "viewAnalytics",
-                              html: "assets/myapp/comer2.webp",
+                              html: "assets/myapp/comer2.png",
                             ),
                           ),
                           SizedBox(
@@ -288,7 +288,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Rachunek Sumienia",
-                              html: "assets/myapp/comer1.webp",
+                              html: "assets/myapp/comer1.png",
                             ),
                           ),
                           SizedBox(
@@ -302,7 +302,7 @@ class _LargeAppsState extends State<LargeApps> {
                             },
                             child: MenuCard(
                               title: "Alleluja",
-                              html: "assets/myapp/comer4.webp",
+                              html: "assets/myapp/comer4.png",
                             ),
                           ),
                           SizedBox(
@@ -371,35 +371,35 @@ class SmallApps extends StatelessWidget {
                       children: [
                         MenuCard(
                           title: "Drzewostan",
-                          html: "assets/myapp/unnamed0.webp",
+                          html: "assets/myapp/unnamed0.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "Spojrzyj -Soczewki kontaktowe",
-                          html: "assets/myapp/unnamed1.webp",
+                          html: "assets/myapp/unnamed1.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "Smoguś",
-                          html: "assets/myapp/unnamed2.webp",
+                          html: "assets/myapp/unnamed2.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "Witcher \"Toss a coin to your Witcher \"",
-                          html: "assets/myapp/unnamed3.webp",
+                          html: "assets/myapp/unnamed3.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "Zaznacz to",
-                          html: "assets/myapp/unnamed4.webp",
+                          html: "assets/myapp/unnamed4.png",
                         ),
                       ],
                     ),
@@ -422,28 +422,28 @@ class SmallApps extends StatelessWidget {
                       children: [
                         MenuCard(
                           title: "viewConnect 2",
-                          html: "assets/myapp/comer3.webp",
+                          html: "assets/myapp/comer3.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "viewAnalytics",
-                          html: "assets/myapp/comer2.webp",
+                          html: "assets/myapp/comer2.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "Rachunek Sumienia",
-                          html: "assets/myapp/comer1.webp",
+                          html: "assets/myapp/comer1.png",
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         MenuCard(
                           title: "Alleluja",
-                          html: "assets/myapp/comer4.webp",
+                          html: "assets/myapp/comer4.png",
                         ),
                         SizedBox(
                           width: 20,
@@ -550,8 +550,8 @@ class SmallApps extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: [
-                                            Image.network(
-                                              "assets/myapp/unnamed${i - 1}.webp",
+                                            Image.asset(
+                                              "assets/myapp/unnamed${i - 1}.png",
                                               height: 80,
                                             ),
                                             SizedBox(
@@ -596,7 +596,7 @@ class SmallApps extends StatelessWidget {
                     SizedBox(
                       height: 40,
                     ),
-                    Image.network("assets/mobile-cont.png", scale: .65),
+                    Image.asset("assets/mobile-cont.png", scale: .65),
                     //Search()
                   ],
                 ),
@@ -648,7 +648,7 @@ class MenuCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           // Image.asset(image, height: 40),
-          Image.network(
+          Image.asset(
             html,
             height: 80,
           ),

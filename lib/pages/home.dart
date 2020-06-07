@@ -13,7 +13,7 @@ class LargeChild extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .6,
-            child: Image.network("assets/image.png", scale: .85),
+            child: Image.asset("assets/image.png", scale: .85),
           ),
 
           FractionallySizedBox(
@@ -89,7 +89,7 @@ class LargeChild extends StatelessWidget {
                                 backgroundColor: Colors.white10,
                                 child: Center(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Image.network("assets/github.png"),
+                                  child: Image.asset("assets/github.png"),
                                 )),
                                 onPressed: () {
 
@@ -104,7 +104,7 @@ class LargeChild extends StatelessWidget {
                                 backgroundColor: Colors.white10,
                                 child: Center(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Image.network("assets/youtube.png"),
+                                  child: Image.asset("assets/youtube.png"),
                                 )),
                                 onPressed: () {
                                   js.context.callMethod("open", ["https://www.youtube.com/channel/UCseP9k1DwSAqzZ-iyeAlTvg"]);
@@ -118,7 +118,7 @@ class LargeChild extends StatelessWidget {
 
                                 child: Center(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Image.network("assets/fb.png"),
+                                  child: Image.asset("assets/fb.png"),
                                 )),
                                 onPressed: () {
                                   js.context.callMethod("open", ["https://www.facebook.com/Anion-Code-115934359788737"]);
@@ -133,7 +133,7 @@ class LargeChild extends StatelessWidget {
 
                                 child: Center(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Image.network("assets/google.png"),
+                                  child: Image.asset("assets/google.png"),
                                 )),
                                 onPressed: () {
                                   js.context.callMethod("open", ["https://play.google.com/store/apps/dev?id=5300491392807005874"]);
@@ -148,7 +148,7 @@ class LargeChild extends StatelessWidget {
 
                                 child: Center(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Image.network("assets/linkedin.png"),
+                                  child: Image.asset("assets/linkedin.png"),
                                 )),
                                 onPressed: () {
                                   js.context.callMethod("open", ["https://www.linkedin.com/in/pawe%C5%82-krzy%C5%9Bciak-2691a8186/"]);
@@ -240,7 +240,7 @@ class SmallChild extends StatelessWidget {
               height: 30,
             ),
             Center(
-              child: Image.network(
+              child: Image.asset(
                 "assets/image.png",
                 scale: 1,
               ),
@@ -258,7 +258,7 @@ class SmallChild extends StatelessWidget {
                       backgroundColor: Colors.white10,
                       child: Center(child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/github.png"),
+                        child: Image.asset("assets/github.png"),
                       )),
                       onPressed: () {
 
@@ -273,7 +273,7 @@ class SmallChild extends StatelessWidget {
                       backgroundColor: Colors.white10,
                       child: Center(child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/youtube.png"),
+                        child:Image.asset("assets/youtube.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", ["https://www.youtube.com/channel/UCseP9k1DwSAqzZ-iyeAlTvg"]);
@@ -287,7 +287,7 @@ class SmallChild extends StatelessWidget {
 
                       child: Center(child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/fb.png"),
+                        child: Image.asset("assets/fb.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", ["https://www.facebook.com/Anion-Code-115934359788737"]);
@@ -302,7 +302,7 @@ class SmallChild extends StatelessWidget {
 
                       child: Center(child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/google.png"),
+                        child: Image.asset("assets/google.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", ["https://play.google.com/store/apps/dev?id=5300491392807005874"]);
@@ -317,7 +317,7 @@ class SmallChild extends StatelessWidget {
 
                       child: Center(child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network("assets/linkedin.png"),
+                        child: Image.asset("assets/linkedin.png"),
                       )),
                       onPressed: () {
                         js.context.callMethod("open", ["https://www.linkedin.com/in/pawe%C5%82-krzy%C5%9Bciak-2691a8186/"]);
