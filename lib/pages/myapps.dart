@@ -16,15 +16,21 @@ class _LargeAppsState extends State<LargeApps> {
   @override
   Widget build(BuildContext context) {
     List<ModelDescription> myAppsLis = [
-      ModelDescription("Drzewostan", "  Application for recording the number of trees by class and diameter.\n"+
-          "To then transfer data to other devices.\n"+
-          "* Counts the number of trees divided into classes\n"+
-          "* Sends the report to another device\n"+
-          "* Friendly visual appearance"),
-      ModelDescription("Spojrzyj", "  An application that facilitates the management of your lens replacement. Choose the type of lens the date of first establishment and the application will indicate when to replace it."),
-      ModelDescription("Smoguś", "  The application was created to make the recipient aware of what air he is breathing. Measurements taken from the main official CIEP stations."),
-      ModelDescription("Witcher", " Compare songs . And vote for your favourite \"Toss a coin to your Witcher \"  . SoundBoard"),
-      ModelDescription("Zaznacz to", "  An application that will help us remember places important to us may be a place on vacation, friends' addresses and the marking of these places on the map. And we can share this data with friends"),
+      ModelDescription(
+          "Drzewostan",
+          "  Application for recording the number of trees by class and diameter.\n" +
+              "To then transfer data to other devices.\n" +
+              "* Counts the number of trees divided into classes\n" +
+              "* Sends the report to another device\n" +
+              "* Friendly visual appearance"),
+      ModelDescription("Spojrzyj",
+          "  An application that facilitates the management of your lens replacement. Choose the type of lens the date of first establishment and the application will indicate when to replace it."),
+      ModelDescription("Smoguś",
+          "  The application was created to make the recipient aware of what air he is breathing. Measurements taken from the main official CIEP stations."),
+      ModelDescription("Witcher",
+          " Compare songs . And vote for your favourite \"Toss a coin to your Witcher \"  . SoundBoard"),
+      ModelDescription("Zaznacz to",
+          "  An application that will help us remember places important to us may be a place on vacation, friends' addresses and the marking of these places on the map. And we can share this data with friends"),
     ];
 
     initState() {
@@ -32,21 +38,11 @@ class _LargeAppsState extends State<LargeApps> {
     }
 
     return SizedBox(
-      height: 600,
+      height: 700,
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          Positioned(
-            right: MediaQuery.of(context).size.width/2,
-            bottom: 0,
-            child: Image.network(
-              "assets/mobile-cont.png",height: 200,
-            ),
-          ),
 
-//            Image.network(
-//              "assets/mobile-cont.png",
-//            ),
           FractionallySizedBox(
               alignment: Alignment.centerRight,
               widthFactor: .55,
@@ -58,7 +54,7 @@ class _LargeAppsState extends State<LargeApps> {
                     autoPlay: true,
                     enlargeCenterPage: true,
                   ),
-                  items: [1, 2, 3, 4,5].map((i) {
+                  items: [1, 2, 3, 4, 5].map((i) {
                     return Builder(
                       builder: (BuildContext context) {
                         return Card(
@@ -82,29 +78,33 @@ class _LargeAppsState extends State<LargeApps> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 (MediaQuery.of(context).size.width > 1510 ||
-                                    MediaQuery.of(context).size.width < 760)? Image.network(
-                                  "assets/myapp/rect$i.png",
-                                  height: 350,
-                                ):Container(),
+                                        MediaQuery.of(context).size.width < 760)
+                                    ? Image.network(
+                                        "assets/myapp/rect$i.png",
+                                        height: 350,
+                                      )
+                                    : Container(),
                                 SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
-                                 
                                   child: Container(
                                     padding: EdgeInsets.all(20),
                                     child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Image.network(
-                                          "assets/myapp/unnamed${i-1}.webp",
+                                          "assets/myapp/unnamed${i - 1}.webp",
                                           height: 80,
                                         ),
                                         SizedBox(
                                           height: 20,
                                         ),
-                                        Text("${myAppsLis.elementAt(i - 1).title}",
+                                        Text(
+                                            "${myAppsLis.elementAt(i - 1).title}",
                                             style: TextStyle(
                                                 fontSize: 16,
                                                 fontFamily: 'Montserrat-Bold',
@@ -114,11 +114,14 @@ class _LargeAppsState extends State<LargeApps> {
                                           height: 20,
                                         ),
                                         Flexible(
-                                          child: Text("${myAppsLis.elementAt(i-1).desc}",
+                                          child: Text(
+                                              "${myAppsLis.elementAt(i - 1).desc}",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontFamily: 'Montserrat-Regular',
-                                                  fontSize: 14, color: Colors.black54)),
+                                                  fontFamily:
+                                                      'Montserrat-Regular',
+                                                  fontSize: 14,
+                                                  color: Colors.black54)),
                                         )
                                       ],
                                     ),
@@ -158,38 +161,79 @@ class _LargeAppsState extends State<LargeApps> {
                         height: 30,
                       ),
                       Wrap(
+                        runSpacing: 10,
+
+                        spacing: 10,
+                        crossAxisAlignment: WrapCrossAlignment.start,
+
                         children: [
-                          MenuCard(
-                            title: "Drzewostan",
-                            html: "assets/myapp/unnamed0.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod("open", [
+                                "https://play.google.com/store/apps/details?id=com.anioncode.drzewostan"
+                              ]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Drzewostan",
+                              html: "assets/myapp/unnamed0.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "Spojrzyj -Soczewki kontaktowe",
-                            html: "assets/myapp/unnamed1.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.anioncode.spojrzyj"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Spojrzyj -Soczewki kontaktowe",
+                              html: "assets/myapp/unnamed1.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "Smoguś",
-                            html: "assets/myapp/unnamed2.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.anioncode.smogu"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Smoguś",
+                              html: "assets/myapp/unnamed2.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "Witcher \"Toss a coin to your Witcher \"",
-                            html: "assets/myapp/unnamed3.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.anioncode.witcher"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Witcher \"Toss a coin to your Witcher \"",
+                              html: "assets/myapp/unnamed3.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "Zaznacz to",
-                            html: "assets/myapp/unnamed4.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.anioncode.memory"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Zaznacz to",
+                              html: "assets/myapp/unnamed4.webp",
+                            ),
                           ),
 
                           //  Image.network("assets/myapp/unnamed.webp"),
@@ -208,36 +252,65 @@ class _LargeAppsState extends State<LargeApps> {
                       ),
                       Wrap(
                         children: [
-                          MenuCard(
-                            title: "viewConnect 2",
-                            html: "assets/myapp/comer3.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.lasoft.viewconnect"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "viewConnect 2",
+                              html: "assets/myapp/comer3.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "viewAnalytics",
-                            html: "assets/myapp/comer2.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.lasoft.viewanalytics"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "viewAnalytics",
+                              html: "assets/myapp/comer2.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "Rachunek Sumienia",
-                            html: "assets/myapp/comer1.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=com.lasoft.Rachunek_Sumienia"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Rachunek Sumienia",
+                              html: "assets/myapp/comer1.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          MenuCard(
-                            title: "Alleluja",
-                            html: "assets/myapp/comer4.webp",
+                          InkWell(
+                            onTap: () {
+                              js.context.callMethod(
+                                  "open", ["https://play.google.com/store/apps/details?id=pl.lasoft.Alleluja"]);
+//                            _launchURL("https://github.com/Lukieoo");
+                            },
+                            child: MenuCard(
+                              title: "Alleluja",
+                              html: "assets/myapp/comer4.webp",
+                            ),
                           ),
                           SizedBox(
                             width: 20,
                           ),
                         ],
                       ),
+
                     ])),
           )
         ],
@@ -247,19 +320,24 @@ class _LargeAppsState extends State<LargeApps> {
 }
 
 class SmallApps extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     List<ModelDescription> myAppsLis = [
-      ModelDescription("Drzewostan", "  Application for recording the number of trees by class and diameter.\n"+
-          "To then transfer data to other devices.\n"+
-          "* Counts the number of trees divided into classes\n"+
-          "* Sends the report to another device\n"+
-          "* Friendly visual appearance"),
-      ModelDescription("Spojrzyj", "  An application that facilitates the management of your lens replacement. Choose the type of lens the date of first establishment and the application will indicate when to replace it."),
-      ModelDescription("Smoguś", "  The application was created to make the recipient aware of what air he is breathing. Measurements taken from the main official CIEP stations."),
-      ModelDescription("Witcher", " Compare songs and vote for your favourite \"Toss a coin to your Witcher \"."),
-      ModelDescription("Zaznacz to", "  An application that will help us remember places important to us may be a place on vacation, friends' addresses and the marking of these places on the map. And we can share this data with friends"),
+      ModelDescription(
+          "Drzewostan",
+          "  Application for recording the number of trees by class and diameter.\n" +
+              "To then transfer data to other devices.\n" +
+              "* Counts the number of trees divided into classes\n" +
+              "* Sends the report to another device\n" +
+              "* Friendly visual appearance"),
+      ModelDescription("Spojrzyj",
+          "  An application that facilitates the management of your lens replacement. Choose the type of lens the date of first establishment and the application will indicate when to replace it."),
+      ModelDescription("Smoguś",
+          "  The application was created to make the recipient aware of what air he is breathing. Measurements taken from the main official CIEP stations."),
+      ModelDescription("Witcher",
+          " Compare songs and vote for your favourite \"Toss a coin to your Witcher \"."),
+      ModelDescription("Zaznacz to",
+          "  An application that will help us remember places important to us may be a place on vacation, friends' addresses and the marking of these places on the map. And we can share this data with friends"),
     ];
 
     return SingleChildScrollView(
@@ -287,7 +365,7 @@ class SmallApps extends StatelessWidget {
                     ),
                     Wrap(
                       runSpacing: 15,
-                      alignment: WrapAlignment.center,
+
                       spacing: 10,
                       crossAxisAlignment: WrapCrossAlignment.start,
                       children: [
@@ -323,8 +401,6 @@ class SmallApps extends StatelessWidget {
                           title: "Zaznacz to",
                           html: "assets/myapp/unnamed4.webp",
                         ),
-
-
                       ],
                     ),
                     SizedBox(
@@ -415,14 +491,16 @@ class SmallApps extends StatelessWidget {
 //                        );
 //                      }).toList(),
 //                    ),
-                    SizedBox(height: 30,),
-                     CarouselSlider(
+                    SizedBox(
+                      height: 30,
+                    ),
+                    CarouselSlider(
                       options: CarouselOptions(
                         height: 400.0,
                         autoPlay: true,
                         enlargeCenterPage: true,
                       ),
-                      items: [1, 2, 3, 4,5].map((i) {
+                      items: [1, 2, 3, 4, 5].map((i) {
                         return Builder(
                           builder: (BuildContext context) {
                             return Card(
@@ -460,40 +538,45 @@ class SmallApps extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-
                                     SizedBox(
                                       width: 10,
                                     ),
                                     Expanded(
-
                                       child: Container(
                                         padding: EdgeInsets.all(20),
                                         child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
                                           children: [
                                             Image.network(
-                                              "assets/myapp/unnamed${i-1}.webp",
+                                              "assets/myapp/unnamed${i - 1}.webp",
                                               height: 80,
                                             ),
                                             SizedBox(
                                               height: 20,
                                             ),
-                                            Text("${myAppsLis.elementAt(i - 1).title}",
+                                            Text(
+                                                "${myAppsLis.elementAt(i - 1).title}",
                                                 style: TextStyle(
                                                     fontSize: 16,
-                                                    fontFamily: 'Montserrat-Bold',
+                                                    fontFamily:
+                                                        'Montserrat-Bold',
                                                     fontWeight: FontWeight.bold,
                                                     color: Colors.black54)),
                                             SizedBox(
                                               height: 20,
                                             ),
                                             Flexible(
-                                              child: Text("${myAppsLis.elementAt(i-1).desc}",
+                                              child: Text(
+                                                  "${myAppsLis.elementAt(i - 1).desc}",
                                                   textAlign: TextAlign.center,
                                                   style: TextStyle(
-                                                      fontFamily: 'Montserrat-Regular',
-                                                      fontSize: 14, color: Colors.black54)),
+                                                      fontFamily:
+                                                          'Montserrat-Regular',
+                                                      fontSize: 14,
+                                                      color: Colors.black54)),
                                             )
                                           ],
                                         ),
