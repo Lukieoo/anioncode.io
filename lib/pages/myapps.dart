@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'dart:js' as js;
 
 import 'package:flutter/rendering.dart';
+import 'package:flutterapp/Models/DesciptionApp.dart';
 
 class LargeApps extends StatefulWidget {
   @override
@@ -14,6 +15,18 @@ class LargeApps extends StatefulWidget {
 class _LargeAppsState extends State<LargeApps> {
   @override
   Widget build(BuildContext context) {
+    List<ModelDescription> myAppsLis = [
+      ModelDescription("Drzewostan", "  Application for recording the number of trees by class and diameter.\n"+
+          "To then transfer data to other devices.\n"+
+          "* Counts the number of trees divided into classes\n"+
+          "* Sends the report to another device\n"+
+          "* Friendly visual appearance"),
+      ModelDescription("Spojrzyj", "  An application that facilitates the management of your lens replacement. Choose the type of lens the date of first establishment and the application will indicate when to replace it."),
+      ModelDescription("Smoguś", "  The application was created to make the recipient aware of what air he is breathing. Measurements taken from the main official CIEP stations."),
+      ModelDescription("Witcher", " Compare songs . And vote for your favourite \"Toss a coin to your Witcher \"  . SoundBoard"),
+      ModelDescription("Zaznacz to", "  An application that will help us remember places important to us may be a place on vacation, friends' addresses and the marking of these places on the map. And we can share this data with friends"),
+    ];
+
     initState() {
       super.initState();
     }
@@ -23,13 +36,17 @@ class _LargeAppsState extends State<LargeApps> {
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-//          Positioned(
-//            right: MediaQuery.of(context).size.width/2,
-//            bottom: -100,
-//            child: Image.network(
+          Positioned(
+            right: MediaQuery.of(context).size.width/2,
+            bottom: 0,
+            child: Image.network(
+              "assets/mobile-cont.png",height: 200,
+            ),
+          ),
+
+//            Image.network(
 //              "assets/mobile-cont.png",
 //            ),
-//          ),
           FractionallySizedBox(
               alignment: Alignment.centerRight,
               widthFactor: .55,
@@ -41,16 +58,74 @@ class _LargeAppsState extends State<LargeApps> {
                     autoPlay: true,
                     enlargeCenterPage: true,
                   ),
-                  items: [1, 2, 3, 4].map((i) {
+                  items: [1, 2, 3, 4,5].map((i) {
                     return Builder(
                       builder: (BuildContext context) {
                         return Card(
-                          child: Stack(
-                            fit: StackFit.expand,
-                            children: [
-                              Image.network("https://lh3.googleusercontent.com/XTn8szgzKy-ndAp4IqycotR9VLvjkmqrHFtP446Y7Lty-Tus29sM-QWH_NH8c04BvLY=w2560-h1292-rw",height: 300,),
-
-                            ],
+                          elevation: 4,
+                          child: Container(
+//                            decoration: BoxDecoration(
+//                              gradient: LinearGradient(
+//                                  colors: [Color(0xFF3a1c71 ), Color(0xFFd76d77), Color(0xFFffaf7b)],
+//
+//                                  begin: Alignment.bottomRight,
+//                                  end: Alignment.topLeft),
+//                              boxShadow: [
+//                                BoxShadow(
+//                                    color: Color(0xFF6578ea).withOpacity(.3),
+//                                    offset: Offset(0, 8),
+//                                    blurRadius: 8)
+//                              ],
+//                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                (MediaQuery.of(context).size.width > 1510 ||
+                                    MediaQuery.of(context).size.width < 760)? Image.network(
+                                  "assets/myapp/rect$i.png",
+                                  height: 350,
+                                ):Container(),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Expanded(
+                                 
+                                  child: Container(
+                                    padding: EdgeInsets.all(20),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Image.network(
+                                          "assets/myapp/unnamed${i-1}.webp",
+                                          height: 80,
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text("${myAppsLis.elementAt(i - 1).title}",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontFamily: 'Montserrat-Bold',
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.black54)),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Flexible(
+                                          child: Text("${myAppsLis.elementAt(i-1).desc}",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: 'Montserrat-Regular',
+                                                  fontSize: 14, color: Colors.black54)),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -86,7 +161,7 @@ class _LargeAppsState extends State<LargeApps> {
                         children: [
                           MenuCard(
                             title: "Drzewostan",
-                            html: "assets/myapp/unnamed.webp",
+                            html: "assets/myapp/unnamed0.webp",
                           ),
                           SizedBox(
                             width: 20,
@@ -172,11 +247,24 @@ class _LargeAppsState extends State<LargeApps> {
 }
 
 class SmallApps extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+    List<ModelDescription> myAppsLis = [
+      ModelDescription("Drzewostan", "  Application for recording the number of trees by class and diameter.\n"+
+          "To then transfer data to other devices.\n"+
+          "* Counts the number of trees divided into classes\n"+
+          "* Sends the report to another device\n"+
+          "* Friendly visual appearance"),
+      ModelDescription("Spojrzyj", "  An application that facilitates the management of your lens replacement. Choose the type of lens the date of first establishment and the application will indicate when to replace it."),
+      ModelDescription("Smoguś", "  The application was created to make the recipient aware of what air he is breathing. Measurements taken from the main official CIEP stations."),
+      ModelDescription("Witcher", " Compare songs and vote for your favourite \"Toss a coin to your Witcher \"."),
+      ModelDescription("Zaznacz to", "  An application that will help us remember places important to us may be a place on vacation, friends' addresses and the marking of these places on the map. And we can share this data with friends"),
+    ];
+
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(40),
+        padding: EdgeInsets.all(5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
@@ -205,7 +293,7 @@ class SmallApps extends StatelessWidget {
                       children: [
                         MenuCard(
                           title: "Drzewostan",
-                          html: "assets/myapp/unnamed.webp",
+                          html: "assets/myapp/unnamed0.webp",
                         ),
                         SizedBox(
                           width: 20,
@@ -236,45 +324,7 @@ class SmallApps extends StatelessWidget {
                           html: "assets/myapp/unnamed4.webp",
                         ),
 
-                        //  Image.network("assets/myapp/unnamed.webp"),
-//                  CarouselSlider(
-//                    options: CarouselOptions(height: 400.0, autoPlay: true,
-//
-//                      enlargeCenterPage: true,),
-//                    items: [1, 2, 3, 4].map((i) {
-//                      return Builder(
-//                        builder: (BuildContext context) {
-//                          return Card(
-//
-//                            child: Column(
-//                              crossAxisAlignment: CrossAxisAlignment.start,
-//                                mainAxisSize: MainAxisSize.min,
-//                                children: <Widget>[
-//                                  Image.network("assets/myapp/myapp$i.png" ,height: 300,),
-//                                  ButtonBar(
-//                                    children: <Widget>[
-//                                      FlatButton(
-//                                        child: const Text('BUY TICKETS'),
-//                                        onPressed: () {
-//                                          /* ... */
-//                                        },
-//                                      ),
-//                                      FlatButton(
-//                                        child: const Text('LISTEN'),
-//                                        onPressed: () {
-//                                          /* ... */
-//                                        },
-//                                      ),
-//                                    ],
-//                                  ),
-//                                ]),
-//                          );
-//                        },
-//                      );
-//                    }).toList(),
-//                  ),
 
-                        //Search()
                       ],
                     ),
                     SizedBox(
@@ -365,6 +415,101 @@ class SmallApps extends StatelessWidget {
 //                        );
 //                      }).toList(),
 //                    ),
+                    SizedBox(height: 30,),
+                     CarouselSlider(
+                      options: CarouselOptions(
+                        height: 400.0,
+                        autoPlay: true,
+                        enlargeCenterPage: true,
+                      ),
+                      items: [1, 2, 3, 4,5].map((i) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Card(
+                              elevation: 4,
+                              child: Container(
+//                                decoration: BoxDecoration(
+//                                  gradient: LinearGradient(
+//                                      colors: [Color(0xFF3a1c71 ), Color(0xFFd76d77), Color(0xFFffaf7b)],
+//
+//                                      begin: Alignment.bottomRight,
+//                                      end: Alignment.topLeft),
+//                                  boxShadow: [
+//                                    BoxShadow(
+//                                        color: Color(0xFF6578ea).withOpacity(.3),
+//                                        offset: Offset(0, 8),
+//                                        blurRadius: 8)
+//                                  ],
+//                                ),
+//                            decoration: BoxDecoration(
+//                              gradient: LinearGradient(
+//                                  colors: [
+//                                    Color(0xFFC86DD7).withOpacity(0.7),
+//                                    Color(0xFF3023AE).withOpacity(0.7)
+//                                  ],
+//                                  begin: Alignment.bottomRight,
+//                                  end: Alignment.topLeft),
+//                              boxShadow: [
+//                                BoxShadow(
+//                                    color: Color(0xFF6078ea).withOpacity(.3),
+//                                    offset: Offset(0, 8),
+//                                    blurRadius: 8)
+//                              ],
+//                            ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+
+                                      child: Container(
+                                        padding: EdgeInsets.all(20),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            Image.network(
+                                              "assets/myapp/unnamed${i-1}.webp",
+                                              height: 80,
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text("${myAppsLis.elementAt(i - 1).title}",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontFamily: 'Montserrat-Bold',
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black54)),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Flexible(
+                                              child: Text("${myAppsLis.elementAt(i-1).desc}",
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                      fontFamily: 'Montserrat-Regular',
+                                                      fontSize: 14, color: Colors.black54)),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      }).toList(),
+//                  ),
+
+                      //Search()
+                    ),
                     SizedBox(
                       height: 40,
                     ),
@@ -407,7 +552,7 @@ class MenuCard extends StatelessWidget {
           : 80,
       padding: EdgeInsets.all(5),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(0),
         color: Colors.white,
         boxShadow: [
           BoxShadow(
